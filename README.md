@@ -24,7 +24,7 @@ Implement MCTS in `ai.py`. Read the comments carefully, as well as the pseudocod
 
 Note that the starter code makes it clear that your MCTS should return more than just one action in the end, but also the table of UCB values for all actions for the root node. The tests compare these values that you compute with the correct ones for a few predefined states. 
 
-In MCTS, the search exits when the "computation budget" is reached (Line 20 in `ai.py`). The current default value is 1000, which will be used for testing. You can increase or decrease it to see the different behaviors of AI. In particular, with budget over 6000, a correctly implemented MCTS AI should be able to play an interesting game against you. 
+In MCTS, the search exits when the "computation budget" is reached (Line 20 in `ai.py`). The current default value is 1000, which will be used for testing. You can increase or decrease it to see the different behaviors of AI. For instance, with a budget over 6000, a correctly implemented MCTS AI should be able to play a fairly interesting game against you (although it may still make some obvious mistakes when the number of next actions to consider gets larger). Check the MCTS-1000.mov and MCTS-6000.mov files in the repo for MCTS with 1000 and 6000 budgets respectively.
 
 It is easy to see that good moves should be pretty close to the pieces already on the board. Thus, to accelerate search, we have limited the search to a small "active" area around existing pieces (this area uses black lines on the board, compared to grey lines in the inactive area). 
 
