@@ -37,4 +37,4 @@ Tests
 Note
 ------
 - Make sure to start early. This PA requires more work than previous assignments. 
-- Check this [survey article](http://mcts.ai/pubs/mcts-survey-master.pdf) for more info on MCTS. 
+- Check this [survey article](http://www.incompleteideas.net/609%20dropbox/other%20readings%20and%20resources/MCTS-survey.pdf) for more info on MCTS. 
