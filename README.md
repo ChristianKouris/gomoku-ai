@@ -7,7 +7,8 @@ Again, DO NOT publicly fork this repositiory.
 
 Due date
 -----
-May-24 5pm. 
+May-24 5pm. Only submit the `ai.py` file on Gradescope. 
+
 
 The Game
 -----
