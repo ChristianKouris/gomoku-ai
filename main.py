@@ -5,7 +5,7 @@ from game import Game, WHITE, BLACK, EMPTY, GRID_COUNT
 from test import deterministic_test, win_test
 from ai import AI
 
-gen_tests = True
+gen_tests = False
 
 GRID_SIZE = 46
 RADIUS = GRID_SIZE // 2
@@ -59,10 +59,10 @@ class Gomoku():
         if self.ai_play:
             if not self.game.game_over:
                 ai_player = AI(self.game.state())
-                (r,c), actions = ai_player.mcts_search()
+                (r,c), win_rates = ai_player.mcts_search()
                 if gen_tests:
                     self.game.save_state()
-                    self.save_prob_arr(actions)
+                    self.save_prob_arr(win_rates)
                 self.game.place(r, c)
             self.ai_play = False
         else:

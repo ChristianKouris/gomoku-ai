@@ -30,13 +30,13 @@ class AI:
         #TODO: Main MCTS loop
 
         iters = 0
-        action_ucb_table = {} #store the table of actions and their ucb values
+        action_win_rates = {} #store the table of actions and their ucb values
 
         # TODO: Delete this block ->
         self.simulator.reset(*self.root.state)
         for action in self.simulator.get_actions():
-            action_ucb_table[action] = 0
-        return random.choice(self.simulator.get_actions()), action_ucb_table
+            action_win_rates[action] = 0
+        return random.choice(self.simulator.get_actions()), action_win_rates
         # <- Delete this block
 
         # TODO: Implement the MCTS Loop
@@ -51,9 +51,10 @@ class AI:
             iters += 1
         print()
 
-        # TODO: return the best action, and the table of actions and their ucb values
-
-        return action, action_ucb_table
+        # Note: Return the best action, and the table of actions and their win values 
+        #   For that we simply need to use best_child and set c=0 as return values
+        _, action, action_win_rates = self.best_child(self.root, 0)
+        return action, action_win_rates
 
     def select(self, node):
         # TODO: select a child node

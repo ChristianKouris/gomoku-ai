@@ -23,7 +23,7 @@ Tasks
 -----
 Implement MCTS in `ai.py`. Read the comments carefully, as well as the pseudocode in the `MCTS_full.pdf` file in this repository.
 
-Note that the starter code makes it clear that your MCTS should return more than just one action in the end, but also the table of UCB values for all actions for the root node. The tests compare these values that you compute with the correct ones for a few predefined states. 
+Note that the starter code makes it clear that your MCTS should return more than just one action in the end, but also the table of winning rates for all actions for the root node. The tests compare these values that you compute with the correct ones for a few predefined states. 
 
 In MCTS, the search exits when the "computation budget" is reached (Line 20 in `ai.py`). The current default value is 1000, which will be used for testing. You can increase or decrease it to see the different behaviors of AI. For instance, with a budget over 6000, a correctly implemented MCTS AI should be able to play a fairly interesting game against you (although it may still make some obvious mistakes when the number of next actions to consider gets larger). Check the MCTS-1000.mov and MCTS-6000.mov files in the repo for MCTS with 1000 and 6000 budgets respectively.
 
@@ -31,7 +31,7 @@ It is easy to see that good moves should be pretty close to the pieces already o
 
 Tests
 -----
-- `python main.py -t 1` runs tests for the UCB values in several predefined states. Note that a budget of 1000 runs and parameter c=1 in the `best_child` function is used in the test cases. Note that the order in the UCB table is important; make sure to follow the instructions in the `ai.py` starter code. 
+- `python main.py -t 1` runs tests for the winning rate table in several predefined states. Note that a budget of 1000 runs and parameter c=1 in the `best_child` function is used in the test cases. Note that the order in the table is important; make sure to follow the instructions in the `ai.py` starter code. 
 - `python main.py -t 2` runs your AI against a random policy. Your AI should always win (you can try smaller budgets too). 
 
 Note
