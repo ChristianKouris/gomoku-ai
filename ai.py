@@ -59,9 +59,9 @@ class AI:
     def select(self, node):
         # TODO: select a child node
 
-        while node is not None:
+        # while node is not None: #Ignore this line and implemet terminal test
             # NOTE: deterministic_test() requires using c=1 for best_child()
-            break
+        #
         return node
 
     def expand(self, node):
