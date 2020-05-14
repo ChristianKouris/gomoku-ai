@@ -59,8 +59,8 @@ class AI:
     def select(self, node):
         # TODO: select a child node
 
-        # while node is not None: #Ignore this line and implemet terminal test
-            # NOTE: deterministic_test() requires using c=1 for best_child()
+        # while node is not None: #As explained in Slack, ignore this line and follow pseudocode
+        # NOTE: deterministic_test() requires using c=1 for best_child()
         #
         return node
 
