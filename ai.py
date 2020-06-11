@@ -57,7 +57,7 @@ class AI:
         # while node is not None: #As explained in Slack, ignore this line and follow pseudocode
         # NOTE: deterministic_test() requires using c=1 for best_child()
         #
-        while( len(node.children) > 0 ):
+        while( node is not None ):
             if( len(node.untried_actions) > 0 ):
                 return self.expand(node)
             else:
